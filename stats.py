@@ -12,11 +12,17 @@ def get_num_letters(text: str) -> dict:
             num_letters[f"{letter}"] += 1
     return num_letters
 
-def find_num(dict: dict) -> int
-    
+def sort_on(letters):
+    return letters["num"]   
 
 
 def sort_dict(d: dict) -> list:
     temp_list = []
     for char in d:
-        temp_list.add({"char": f"{char}", "num": f"{num}"})
+        temp_dict = {}
+        temp_num = d[f"{char}"]
+        temp_dict["char"] = char
+        temp_dict["num"] = temp_num
+        temp_list.append(temp_dict)
+    temp_list.sort(reverse=True, key=sort_on)
+    return temp_list
